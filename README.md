@@ -1,6 +1,6 @@
-# Car Game - Dr. Driving Inspired
+# car_game - Dr. Driving Inspired
 
-This is a Python-based car game inspired by the popular mobile game Dr. Driving. The goal is to create a simple yet engaging driving game where players can control a car, navigate through obstacles, and achieve objectives.
+This is a Python-based car_game inspired by the popular mobile game Dr. Driving. The goal is to create a simple yet engaging driving game where players can control a car, navigate through obstacles, and achieve objectives.
 
 ## Features (Planned)
 - Basic car movement (forward, backward, left, right).

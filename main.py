@@ -16,7 +16,7 @@ pygame.init()
 # Screen dimensions
 WIDTH, HEIGHT = 800, 600
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("Welcome! Car Game")
+pygame.display.set_caption("Welcome! car_game")
 
 # Colors
 WHITE = (255, 255, 255)
@@ -25,30 +25,30 @@ RED = (255, 0, 0)
 
 # Load assets with error handling
 try:
-    car_image = pygame.image.load(os.path.join("car game", "car.png"))  # Updated path to 'car game' directory
+    car_image = pygame.image.load(os.path.join("car_game", "car.png"))  # Updated path to 'car_game' directory
     car_image = pygame.transform.scale(car_image, (100, 100))  # Expanded both horizontally and vertically
     car_image = car_image.convert_alpha()  # Ensure the image supports transparency
     car_image.set_colorkey(WHITE)  # Remove white background by setting it as transparent
 except pygame.error:
-    print("Error: 'car.png' not found in 'car game' directory. Please add the file.")
+    print("Error: 'car.png' not found in 'car_game' directory. Please add the file.")
     sys.exit()
 
 try:
-    start_sound = pygame.mixer.Sound(os.path.join("car game", "start.wav"))  # Updated path to 'car game' directory
+    start_sound = pygame.mixer.Sound(os.path.join("car_game", "start.wav"))  # Updated path to 'car_game' directory
 except pygame.error:
-    print("Error: 'start.wav' not found in 'car game' directory. Please add the file.")
+    print("Error: 'start.wav' not found in 'car_game' directory. Please add the file.")
     sys.exit()
 
 try:
-    stop_sound = pygame.mixer.Sound(os.path.join("car game", "stop.wav"))  # Updated path to 'car game' directory
+    stop_sound = pygame.mixer.Sound(os.path.join("car_game", "stop.wav"))  # Updated path to 'car_game' directory
 except pygame.error:
-    print("Error: 'stop.wav' not found in 'car game' directory. Please add the file.")
+    print("Error: 'stop.wav' not found in 'car_game' directory. Please add the file.")
     sys.exit()
 
 try:
-    crash_sound = pygame.mixer.Sound(os.path.join("car game", "crash.wav"))  # Updated path to 'car game' directory
+    crash_sound = pygame.mixer.Sound(os.path.join("car_game", "crash.wav"))  # Updated path to 'car_game' directory
 except pygame.error:
-    print("Error: 'crash.wav' not found in 'car game' directory. Please add the file.")
+    print("Error: 'crash.wav' not found in 'car_game' directory. Please add the file.")
     sys.exit()
 
 # Clear the console
@@ -83,7 +83,7 @@ instruction_font = pygame.font.Font(None, 28)
 
 # Display instructions on the terminal
 print("""
-Welcome to the Car Game!
+Welcome to the car_game!
 Controls:
 - Press 'S' to start the car
 - Press 'T' to stop the car
@@ -137,7 +137,7 @@ def display_leaderboard():
 def display_menu():
     screen.fill(WHITE)  # Set the screen to white (inverted from black)
 
-    title_surface = font.render("Welcome! to Car Game", True, BLACK)  # Text color inverted to black
+    title_surface = font.render("Welcome! to car_game", True, BLACK)  # Text color inverted to black
     screen.blit(title_surface, (WIDTH // 2 - title_surface.get_width() // 2, 200))  # Adjusted position to fit below the title
 
     menu_options = [
@@ -189,10 +189,9 @@ def display_instructions():
             elif event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_b:  # Back to menu
                     return
-gti 
 def display_loading_screen():
     try:
-        additional_image = pygame.image.load(os.path.join("car game", "loading_image.png"))  # Path to 'car game' directory
+        additional_image = pygame.image.load(os.path.join("car_game", "loading_image.png"))  # Path to 'car_game' directory
         additional_image = pygame.transform.scale(additional_image, (300, 300))  # Adjust size for better visibility
     except pygame.error as e:
         print(f"Warning: Loading image not found or failed to load. Error: {e}")
